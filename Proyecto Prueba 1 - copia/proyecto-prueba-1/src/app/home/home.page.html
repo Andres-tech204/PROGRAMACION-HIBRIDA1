@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculo de Figuras Geometricas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-select (ionChange)="seleccionarTipodeFiguraGeometrica($event)" label="Tipo de Figura Geometrica">
+    <ion-select-option value="Circulo">Circulo</ion-select-option>
+    <ion-select-option value="Triangulo">Triangulo</ion-select-option>
+    <ion-select-option value="TrianguloEquilatero">TrianguloEquilatero</ion-select-option>
+  </ion-select>
+  <app-figura-circulo *ngIf="esFiguraCirculo()"/>
+  <app-figura-triangulo *ngIf="esFiguraTriangulo()"/>
+  <app-triangulo-equilatero *ngIf="esTrianguloEquilatero()"/>
+</ion-content>

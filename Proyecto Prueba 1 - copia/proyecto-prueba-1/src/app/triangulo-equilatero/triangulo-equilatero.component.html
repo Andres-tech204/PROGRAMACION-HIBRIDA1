@@ -1,0 +1,28 @@
+<ion-list lines="none">
+  <ion-item>
+    <h2>Calcular Perimetro Del Triangulo</h2>
+  </ion-item>
+  <ion-item>
+  
+    <ion-card>
+      <ion-img src="assets/Triangulo-Equilatero.webp" class="imagen-pequeña"></ion-img>
+      <ion-card-header>
+        <ion-card-title>LADOS DEL TRIANGULO EQUILATERO</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        El perimetro de un triangulo es la suma de las longitudes de sus tres lados. En otras palabras, es la medida total del contorno o borde del triangulo
+      </ion-card-content>
+    </ion-card>
+
+
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoAStr" type="number" label="LadoA" label-placement="floating" fill="solid" placeholder="Ingrese el Primer Lado"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-button (click)="CalcularPerimetro()">Calcular el Perimetro</ion-button>
+  </ion-item>
+  <ion-item>
+    {{resultado}}
+  </ion-item>
+</ion-list> 
